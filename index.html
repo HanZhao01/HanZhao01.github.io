@@ -6,12 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <!-- (Part 2: CSS, Question 0) Font import here. If you don't know what this is yet, don't worry, we cover this in the Part 2 of the homework.-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Nanum+Gothic&family=Oswald:wght@200..700&family=Prata&family=Quicksand:wght@300..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Staatliches&display=swap" rel="stylesheet">
     <title>Zihan Zhao</title>
 </head>
 <body>
         <!-- Part 1: Question 0. Add an image of yourself here. -->
         <h1>Zihan Zhao</h1>
-        <img src = "./assets/Zihan_Zhao.png"/>
+        <img src = "./assets/self.png"/>
         <!-- Question 1. Add a unique id to each div that belongs to the class "section-wrapper".-->
         <div id = education class="section-wrapper">
             <h2>Education</h2>
@@ -26,8 +29,8 @@
         <div id = skills class = "section-wrapper">
             <h2>Skills</h2>
             <ul class = skills-list>
-                <li><b>Programming Language:</b>&nbsp;&nbsp;Java, Python, C, SQL, JavaScript, HTML, CSS, Assembly, Scheme</li>
-                <li><b>Web Development:</b>&nbsp;&nbsp;Spring Boot, MyBatis-Plus, RESTful APIs, Maven, MySQL</li>
+                <li><b>Programming Language:</b>&nbsp;&nbsp;Java, Python, C, SQL, Node.js, JavaScript, HTML, CSS, Assembly, Scheme</li>
+                <li><b>Web frameworks:</b>&nbsp;&nbsp;Express.js, React, Gin, Django</li>
                 <li><b>Tools:</b>&nbsp;&nbsp;Git, Jupyter Notebook, Logisim, OpenMP</li>
                 <li><b>Data Analysis & ML:</b>&nbsp;&nbsp;Pandas, Numpy, PuLP, scikit-Learn, Matplotlib</li>
             </ul>
@@ -37,25 +40,30 @@
             <div class="experience-wrapper">
                 <!-- Question 3a. Copy-paste the div with the class experience-list-item twice, and fill them in with your work experiences. -->
                 <div class="experience-list-item">
-                    <h3>Back End Web Development Intern at HuaDun Digital Technology Co., Ltd</h3>
+                    <h3>Software Engineering Intern at Tencent - Monitoring System Bypass Configuration</h3>
                     <ul>
                         <!-- Question 3b. Fill this in with some bulletpoints on things you did. -->
-                        <li>Developed a scalable backend for our company's website, utilizing Spring Boot, MyBatis-Plus, 
-                            and MySQL to construct a microservices architecture focused on efficiency, performance, and resilience.</li>
-                        <li>Implemented a suite of RESTful APIs for robust user data management, ensuring data integrity, 
-                            and employing Spring Boot's IOC for improved code maintainability and scalability.</li>
+                        <li>Designed and implemented a monitoring system bypass configuration, addressing the issue of high load and latency caused by the traditional backend
+                            method of fetching data for individual projects. When creating a project, the system determines whether to enable bypass, allowing projects with bypass
+                            enabled to periodically batch fetch user performance data and logs from external monitoring systems after going live. The data is written into memory and
+                            synchronized to the data warehouse, significantly improving data processing efficiency and reducing the load on the main system.</li>
+                        <li>The system can also
+                            automatically initialize bypass configuration upon startup</li>
                     </ul>
                 </div>
                 <div class="experience-list-item">
-                    <h3>Softerware Engineering Intern at HuaDun Digital Technology Co., Ltd</h3>
+                    <h3>Software Engineering Intern at Tencent - Low-Code Development Platform AI Assistance</h3>
                     <ul>
                         <!-- Question 3b. Fill this in with some bulletpoints on things you did. -->
-                        <li>Optimized the performance of an IoT project–Modbus Communication Protocol through strategic thread pool utilization,
-                                ensuring rapid data processing and robust real-time response—enforced data integrity with effective locking, 
-                                maintaining seamless data flow and transmission fidelity.
+                        <li>The AI system of the low-code development platform is used to check process node configurations, overall process logic, and embedded code modules,
+                            generating reports and alerts to help developers identify configuration and logic errors. My responsibilities included: preprocessing code modules, extracting
+                            functions, variables, and multi-level dependencies to optimize code checks; engineering verification of SQL and table creation statements, using EXPLAIN
+                            SQL to check database node configurations; displaying and allowing internal management to track the review status of process inspection reports in the
+                            backend management system, supporting fuzzy search, and optimizing data loading speed through pagination and multithreading.
                         </li>
                     </ul>
                 </div>
+                
                 <!-- Question 3c. Create a div that contains/wraps around ALL the experience-list-item divs named "experience-wrapper"! You'll need this later. -->
             </div>
         </div>
@@ -64,17 +72,16 @@
             <!-- Question 4a. Create a few project-list-items divs. Fill these in with your favorite projects! -->
             <div class="projects-wrapper">
                 <div class="project-list-item">
-                    <h3>2D Third-Person Game</h3>
-                    <p>Crafted a 2D game with dynamic map generation using Minimum Spanning Trees and Seed, employing stdDraw for rendering. 
-                        Integrated a responsive engine for character movement, real-time status display, and customized character 
-                        options with the ability to exit and save game progress.</p>
+                    <h3>EduHive Educational Technology Platform </h3>
+                    <p>EduHive is an educational technology platform I co-founded in 2024,and the team has since expanded to 14 people, aimed at connecting
+                        students, researchers, and entrepreneurs globally. The platform uses an AI-driven matching system, integrating large language models and graph
+                        neural networks (GNN), to support interdisciplinary collaboration. I led the development of the recommendation system, frontend and backend
+                        architecture, and designed AI algorithms to match users with projects based on skills and requirements</p>
                 </div>
                 <div class="project-list-item">
-                    <h3>Spam Detection & Real Estate Valuation</h3>
-                    <p>Implemented two ways, including Logistic Regression and SVC models for accurate email spam detection, 
-                        employing keyword analysis and K-Fold Cross-Validation. Applied Ridge Regression to U.S. real estate data
-                        , leveraged PCA for dimensionality reduction in U.S. municipal real estate data that capture the most 
-                        variance to enhance the predicted accuracy for Real Estate Valuation</p>
+                    <h3>Optimization of Convolution Operations in CNNs through Parallel Processing with C Programming</h3>
+                    <p>Engineered and optimized convolution processes within CNNs using C programming, incorporating SIMD (Single Instruction, Multiple Data), OpenMP
+                        multi-threading, and Open MPI distributed computing techniques. Achieved a speed-up of 49.15x, enhancing processing efficiency and scalability.</p>
                 </div>
                 <div class="project-list-item">
                     <h3>Voice Command Robot Car</h3>
@@ -87,16 +94,15 @@
                         instruction types, optimized with a two-stage pipeline for enhanced performance.</p>
                 </div>
                 <div class="project-list-item">
-                    <h3>Implementation of Database System</h3>
-                    <p>Constructed B+ Tree indexing, optimized join operations and sorting algorithms, applied query plan 
-                        cost-based optimization with dynamic programming algorithm, and engineered thread-safe operations 
-                        by integrating concurrency control techniques.</p>
+                    <h3>Convolutional Neural Network Implementations and Applications</h3>
+                    <p>Implemented and tested key components of neural networks, including Activation Functions, Convolutional, Pooling, Flattening, and Fully Connected
+                        Layers, Forward Pass, and Backpropagation. Explored Batch Processing, ReLU, SGD and Adam Optimizer, Dropout Layers, Normalizing, and
+                        Regularizations to enhance efficiency. Using libraries like Torch and NumPy to apply CNN to real-world datasets including MNIST, and CIFAR-10.</p>
                 </div>
                 <div class="project-list-item">
-                    <h3>Neural Network Implementations and Applications</h3>
-                    <p>Implemented and tested key components of neural networks, including ReLU, fully connected, 
-                        and convolutional layers, using NumPy. Explored batch processing and gradient checking to enhance 
-                        efficiency. Applied networks to real-world datasets including Iris, MNIST, and CIFAR-10</p>
+                    <h3>Implementation of Database System</h3>
+                    <p>Constructed B+ Tree indexing, optimized join operations, applied join plan cost-based optimization with dynamic programming algorithm, and
+                        engineered transaction-safe concurrency operations, utilized the ARIES recovery algorithm to maintain the atomicity and durability of the transactions.</p>
                 </div>
             </div>
         </div>
