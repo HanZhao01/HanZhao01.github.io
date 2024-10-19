@@ -1,117 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <!-- (Part 2: CSS, Question 0) Font import here. If you don't know what this is yet, don't worry, we cover this in the Part 2 of the homework.-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Nanum+Gothic&family=Oswald:wght@200..700&family=Prata&family=Quicksand:wght@300..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Staatliches&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Zihan Zhao</title>
-</head>
-<body>
-        <!-- Part 1: Question 0. Add an image of yourself here. -->
-        <h1>Zihan Zhao</h1>
-        <img src = "./assets/self.png"/>
-        <!-- Question 1. Add a unique id to each div that belongs to the class "section-wrapper".-->
-        <div id = education class="section-wrapper">
-            <h2>Education</h2>
-            <!-- Question 2. Fill this in with details about your degree, major(s), and coursework. Use at least 1 header tag (h3, b, or em). -->
-            <p><b>AUG 2021 - MAY 2025:</b> Computer Science <em>(Bachelor's degree)</em> at UC Berkeley</p>
-            <p><b>Relevant Coursework:</b> The Structure and Interpretation of Computer Programs, Data Structures, 
-                Computer Architecture, Discrete Mathematics and Probability Theory, Algorithm and Interactable Problems, 
-                Foundations of Data Science, Principles & Techniques of Data Science, Advanced Circuits and Differential Equations, 
-                Linear Algebra, Physics for Scientists and Engineers I, II, and III, Multivariable Calculus,
-                (Ongoing courses: Machine Learning, Database Systems, Introduction to Building Apps)</p>
-        </div>
-        <div id = skills class = "section-wrapper">
-            <h2>Skills</h2>
-            <ul class = skills-list>
-                <li><b>Programming Language:</b>&nbsp;&nbsp;Java, Python, C, SQL, Node.js, JavaScript, HTML, CSS, Assembly, Scheme</li>
-                <li><b>Web frameworks:</b>&nbsp;&nbsp;Express.js, React, Gin, Django</li>
-                <li><b>Tools:</b>&nbsp;&nbsp;Git, Jupyter Notebook, Logisim, OpenMP</li>
-                <li><b>Data Analysis & ML:</b>&nbsp;&nbsp;Pandas, Numpy, PuLP, scikit-Learn, Matplotlib</li>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/media.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+
+    <header id="header" class="header">
+      <div class="container container-lg">
+        <div class="header-nav">
+          <a href="#home" class="logo">Z<span>.</span>Zhao</a>
+          <nav id="nav" class="nav">
+            <ul class="nav-list">
+              <li class="nav-item">
+                <a href="#home" class="nav-link">Home</a>
+              </li>
+              <li class="nav-item">
+                <a href="#about" class="nav-link">About</a>
+              </li>
+              <li class="nav-item">
+                <a href="projects.html" class="nav-link">Projects</a> 
+              </li>
+              <li class="nav-item">
+                <a href="#contact" class="nav-link">Contact</a>
+              </li>
             </ul>
+            <button id="nav-btn" class="nav-btn">
+              <img
+                id="nav-btn-img"
+                src="img/icons/open.svg"
+                alt="Navigation button"
+              />
+            </button>
+          </nav>
         </div>
-        <div id = experience class="section-wrapper">
-            <h2>Experience</h2>
-            <div class="experience-wrapper">
-                <!-- Question 3a. Copy-paste the div with the class experience-list-item twice, and fill them in with your work experiences. -->
-                <div class="experience-list-item">
-                    <h3>Software Engineering Intern at Tencent - Monitoring System Bypass Configuration</h3>
-                    <ul>
-                        <!-- Question 3b. Fill this in with some bulletpoints on things you did. -->
-                        <li>Designed and implemented a monitoring system bypass configuration, addressing the issue of high load and latency caused by the traditional backend
-                            method of fetching data for individual projects. When creating a project, the system determines whether to enable bypass, allowing projects with bypass
-                            enabled to periodically batch fetch user performance data and logs from external monitoring systems after going live. The data is written into memory and
-                            synchronized to the data warehouse, significantly improving data processing efficiency and reducing the load on the main system.</li>
-                        <li>The system can also
-                            automatically initialize bypass configuration upon startup</li>
-                    </ul>
-                </div>
-                <div class="experience-list-item">
-                    <h3>Software Engineering Intern at Tencent - Low-Code Development Platform AI Assistance</h3>
-                    <ul>
-                        <!-- Question 3b. Fill this in with some bulletpoints on things you did. -->
-                        <li>The AI system of the low-code development platform is used to check process node configurations, overall process logic, and embedded code modules,
-                            generating reports and alerts to help developers identify configuration and logic errors. My responsibilities included: preprocessing code modules, extracting
-                            functions, variables, and multi-level dependencies to optimize code checks; engineering verification of SQL and table creation statements, using EXPLAIN
-                            SQL to check database node configurations; displaying and allowing internal management to track the review status of process inspection reports in the
-                            backend management system, supporting fuzzy search, and optimizing data loading speed through pagination and multithreading.
-                        </li>
-                    </ul>
-                </div>
-                
-                <!-- Question 3c. Create a div that contains/wraps around ALL the experience-list-item divs named "experience-wrapper"! You'll need this later. -->
+      </div>
+    </header>
+
+    <section id="home" class="hero">
+      <div class="container container-lg">
+        <div
+          class="hero-row"
+          data-aos="fade-zoom-in"
+          data-aos-easing="ease-in-out"
+          data-aos-delay="200"
+          data-aos-duration="800"
+        >
+          <div class="hero-content">
+            <span class="hero-greeting"> Hello, I am</span>
+            <h1 class="hero-heading">Zihan Zhao</h1>
+            <span class="hero-heading-subtitle"
+              >Undergraduate Student @ UC Berkeley</span
+            >
+            <div class="about-social-list">
+              <div class="social-links-row">
+                <a href="https://github.com/HanZhao01">
+                  <img
+                    src="img/social_icons/github.svg"
+                    alt="Link to GitHub account"
+                  />
+                </a>
+
+                <a href="https://www.linkedin.com/in/zihan-zhao-466a7b223/">
+                  <img
+                    src="img/social_icons/linkedin.svg"
+                    alt="Link to linkedin profile"
+                  />
+                </a>
+              </div>
             </div>
-        </div>
-        <div id = projects class="section-wrapper">
-            <h2>Projects</h2>
-            <!-- Question 4a. Create a few project-list-items divs. Fill these in with your favorite projects! -->
-            <div class="projects-wrapper">
-                <div class="project-list-item">
-                    <h3>EduHive Educational Technology Platform </h3>
-                    <p>EduHive is an educational technology platform I co-founded in 2024,and the team has since expanded to 14 people, aimed at connecting
-                        students, researchers, and entrepreneurs globally. The platform uses an AI-driven matching system, integrating large language models and graph
-                        neural networks (GNN), to support interdisciplinary collaboration. I led the development of the recommendation system, frontend and backend
-                        architecture, and designed AI algorithms to match users with projects based on skills and requirements</p>
-                </div>
-                <div class="project-list-item">
-                    <h3>Optimization of Convolution Operations in CNNs through Parallel Processing with C Programming</h3>
-                    <p>Engineered and optimized convolution processes within CNNs using C programming, incorporating SIMD (Single Instruction, Multiple Data), OpenMP
-                        multi-threading, and Open MPI distributed computing techniques. Achieved a speed-up of 49.15x, enhancing processing efficiency and scalability.</p>
-                </div>
-                <div class="project-list-item">
-                    <h3>Voice Command Robot Car</h3>
-                    <p>Implement a robot car that listens to voice commands and then drives on the command’s pre-defined path, dividing into Analog & Digital
-                        Interface, Motion Circuits, Micboard Sensing Circuits, System Control, SVD & PCA Classification for Voice Commands.</p>
-                </div>
-                <div class="project-list-item">
-                    <h3>RISC-V CPU Architecture Design</h3>
-                    <p>Engineered a RISC-V CPU architecture with the development tool Logisim, integrating a full data path and key components for diverse
-                        instruction types, optimized with a two-stage pipeline for enhanced performance.</p>
-                </div>
-                <div class="project-list-item">
-                    <h3>Convolutional Neural Network Implementations and Applications</h3>
-                    <p>Implemented and tested key components of neural networks, including Activation Functions, Convolutional, Pooling, Flattening, and Fully Connected
-                        Layers, Forward Pass, and Backpropagation. Explored Batch Processing, ReLU, SGD and Adam Optimizer, Dropout Layers, Normalizing, and
-                        Regularizations to enhance efficiency. Using libraries like Torch and NumPy to apply CNN to real-world datasets including MNIST, and CIFAR-10.</p>
-                </div>
-                <div class="project-list-item">
-                    <h3>Implementation of Database System</h3>
-                    <p>Constructed B+ Tree indexing, optimized join operations, applied join plan cost-based optimization with dynamic programming algorithm, and
-                        engineered transaction-safe concurrency operations, utilized the ARIES recovery algorithm to maintain the atomicity and durability of the transactions.</p>
-                </div>
+
+            <div>
+              <a href="#projects" class="btn">My Portfolio</a>
+              <a href="#contact" class="btn btn-white">Contact Me</a>
             </div>
+          </div>
+          <div class="hero-img">
+            <img
+              src="img/self/self.JPG"
+              alt="Picture of Zihan Zhao</a>
+              "
+            />
+          </div>
         </div>
-            <!-- Question 4b. Create a div that contains/wraps around all the projects-list-item divs named "project-wrapper". You'll need this later! -->
-        <div id = contact class="section-wrapper">
-            <!-- Question 5. Add a link to your favorite social media account to the text "here". -->
-            <p> Trying to contact me? </p>
-            <p><b>Email:</b> zihanzhao1117@berkeley.edu</p>
-            <p> Or Linkedin: <a href = "https://www.linkedin.com/in/zihan-zhao-466a7b223/" class = "custom-link">here</a> </p>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+          <div class="about-title">
+            <h2 class="title">About Me</h2>
+          </div>
+          <div class="about-row">
+            <div class="about-content">
+              <p class="about-descr">
+                Hello! My name is Zihan Zhao, and I am currently an undergraduate student majoring Computer Science at UC Berkeley, from Aug 2021 to May 2025. I'm with a passion for software development, AI-driven platforms, and distributed systems, I enjoy diving into both the theoretical and practical aspects of computing.
+                <br /><br />
+                Outside of tech, and I’m a fan of sports, including soccer, table tennis, and chess. Fun Fact: when you think you're hitting rock bottom, that may be just overfitting, it will pull a double descent...  The enough capacity you equipped will generalize better.
+              </p>
+              <div class="about-download-btn">
+                <a href="#!" class="btn btn-white">Download CV</a>
+              </div>
+            </div>
+            <div class="about-skills">
+                <div class="skill">
+                    <div class="skill-title">Software Engineering</div>
+                    <div class="skill-percent">90%</div>
+                    <div class="skillbar" style="width: 90%"></div>
+                  </div>
+                  <div class="skill">
+                    <div class="skill-title">Machine Learning</div>
+                    <div class="skill-percent">90%</div>
+                    <div class="skillbar" style="width: 90%"></div>
+                  </div>
+                  <div class="skill">
+                    <div class="skill-title">Soccer & Chess</div>
+                    <div class="skill-percent">80%</div>
+                    <div class="skillbar" style="width: 80%"></div>
+                  </div>
+                  <div class="skill">
+                    <div class="skill-title">Relativity and Quantum Mechanics</div>
+                    <div class="skill-percent">70%</div>
+                    <div class="skillbar" style="width: 70%"></div>
+                  </div>                  
+            </div>
+          </div>
         </div>
-</body>
+      </section>
+      
+
+
+    <section id="contact" class="contact">
+        <div class="container">
+          <div class="contact-title">
+            <h2 class="title">Contact Me</h2>
+          </div>
+          <div class="contact-content">
+            <p>Feel free to reach out via email or phone!</p>
+            <p>Email: <a href="mailto:calzihanzhao@outlook.com">calzihanzhao@outlook.com</a></p>
+            <p>Phone: +1 510-735-7280</p>
+          </div>
+      
+          <!-- Contact Form -->
+          <form action="mailto:calzihanzhao@outlook.com" method="post" enctype="text/plain">
+            <div class="input-box">
+              <input type="text" name="name" placeholder="Your Name" required />
+            </div>
+            <textarea
+              name="message"
+              cols="30"
+              rows="5"
+              placeholder="Your Message"
+              required
+            ></textarea>
+            <div class="contact-button">
+              <button type="submit" class="btn btn-red">Send Message</button>
+            </div>
+          </form>
+        </div>
+      </section>
+      
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-row">
+          <div class="social-links-row footer-social">
+            <a href="https://github.com/HanZhao01">
+              <img
+                src="img/social_icons/github.svg"
+                alt="Link to GitHub account"
+              />
+            </a>
+
+            <a href="https://www.linkedin.com/in/zihan-zhao-466a7b223/">
+              <img
+                src="img/social_icons/linkedin.svg"
+                alt="Link to linkedin profile"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div id="goToTop" class="goToTop">
+      <a href="#home">
+        <img src="img/icons/arrow_up.svg" alt="Back to top"
+      /></a>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+      integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="js/main.js"></script>
+  </body>
 </html>
