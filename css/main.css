@@ -202,10 +202,11 @@ h5 {
 }
 
 .nav-link:hover {
-    color: orange;
+    color: #e63e00;
 }
 
 /* Hero section */
+
 .hero {
   position: relative;
   padding-top: 18rem;
@@ -244,17 +245,66 @@ h5 {
   font-weight: 400;
 }
 
+/* Hero Image Slider */
+
 .hero-img {
   flex: 0 0 41.6667%;
   text-align: right !important;
   padding: 0 1.5rem;
+  max-width: 700px;
 }
 
 .hero-img img {
-  max-width: 60%;
+  max-width: 70%;
   height: auto;
   vertical-align: bottom;
 }
+
+
+.hero-slider {
+  position: relative;
+  overflow: hidden;
+  height: 400px;
+}
+
+.hero-slider .slide {
+  display: none;
+}
+
+.hero-slider .slide.active {
+  display: block;
+}
+
+.hero-img .prev,
+.hero-img .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  padding: 1.6rem;
+  margin-top: -2.2rem;
+  color: var(--main-text-color);
+  font-weight: bold;
+  font-size: 3.2rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  border-radius: 0.3rem;
+  user-select: none;
+}
+
+.hero-img .prev {
+  left: 0;
+}
+
+.hero-img .next {
+  right: 0;
+}
+
+.hero-img .prev:hover,
+.hero-img .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+}
+
 
 .about-social-list {
   display: flex;
@@ -287,7 +337,7 @@ h5 {
 }
 
 .about-title {
-  margin-top: 5rem;
+  margin-top: 3rem;
   margin-bottom: 4rem;
 }
 
@@ -522,7 +572,7 @@ h5 {
   .contact-button .btn {
     background-color: #ff4500;
     color: #fff;
-    padding: 1rem 2rem;
+
     font-size: 1.4rem;
     border: none;
     border-radius: 5px;
